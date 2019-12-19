@@ -1,0 +1,25 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3>AGREGAR CLIENTE</h3>
+            <form [formGroup]="issueForm" (ngSubmit)="submitForm()" novalidate>
+                <div class="form-group">
+                    <label>NOMBRE CLIENTE</label>
+                    <input type="text" formControlName="NOMBRE" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>TIPO CLIENTE</label>
+                    <!-- copio la lista aqui, te lo debo leyendo de una tabla -->
+                    <select name="select"  formControlName="CONS_TIPOCLIENTE" class="form-control">
+                      <option value="1">NATURAL</option> 
+                      <option value="2">JURIDICA</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">ENVIAR</button>
+            </form>
+        </div>
+
+    </div>
+</div>

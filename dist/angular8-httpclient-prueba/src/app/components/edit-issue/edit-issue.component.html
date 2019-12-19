@@ -1,0 +1,30 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3>EDITAR CLIENTE</h3>
+            <form [formGroup]="updateIssueForm" (ngSubmit)="submitForm()" novalidate >
+                <div class="form-group">
+                    <label>CLIENTE</label>
+                    <input type="text" formControlName="NOMBRE" class="form-control" maxlength="20" name="NOMBRE">
+                </div>
+
+    
+                <div class="form-group">
+                    <label>TIPO CLIENTE</label>&nbsp;
+                    <!-- copio la lista aqui, te lo debo leyendo de una tabla -->
+                    <select name="select"  formControlName="CONS_TIPOCLIENTE" class="form-control">
+                      <option value="1">NATURAL</option> 
+                      <option value="2">JURIDICA</option>
+                    </select>
+
+                </div>
+
+                <!-- validacion -->
+                <button type="submit" [disabled]="updateIssueForm.invalid" class="btn btn-primary">ACTUALIZAR</button>
+            </form>
+        </div>
+
+    </div>
+</div>
